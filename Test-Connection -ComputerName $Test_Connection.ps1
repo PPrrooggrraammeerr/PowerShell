@@ -1,0 +1,22 @@
+﻿
+### Test-Connection -ComputerName $Test_Connection ###
+
+while (1) { 
+
+    while (2) {
+
+        Clear-Host -ErrorAction SilentlyContinue
+            $Test_Connection = Read-Host Type IP or Host
+                Start-Sleep -Seconds 1 -ErrorAction SilentlyContinue
+                    Clear-Host -ErrorAction SilentlyContinue 
+                        Test-Connection -ComputerName $Test_Connection
+                            $Write_Host = Write-Host;
+                                Write-Output $Write_Host
+                                    if (Test-Connection -ComputerName $Test_Connection -ErrorAction SilentlyContinue) {Write-Host $Test_Connection is up -ForegroundColor Green} else {Write-Host $Test_Connection is down -ForegroundColor Red}
+                                        Start-Sleep -Seconds 10 -ErrorAction SilentlyContinue
+                                            Clear-Host -ErrorAction SilentlyContinue
+                                                break
+
+              }
+
+}
