@@ -10,7 +10,7 @@ while (1) {
         Start-Sleep -Seconds 1 -ErrorAction SilentlyContinue
         Clear-Host -ErrorAction SilentlyContinue 
         if (($Test_Connection -eq 'e') -and ($Test_Connection -eq 'E')) {Exit}
-        Test-Connection -ComputerName $Test_Connection
+        Test-Connection -ComputerName $Test_Connection -ErrorAction SilentlyContinue
         $Write_Host = Write-Host;
         Write-Output $Write_Host
         if (Test-Connection -ComputerName $Test_Connection -ErrorAction SilentlyContinue) {Write-Host $Test_Connection is up -ForegroundColor Green} else {Write-Host $Test_Connection is down -ForegroundColor Red} 
