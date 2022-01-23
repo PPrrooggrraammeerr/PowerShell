@@ -38,4 +38,5 @@ Clear-Host -ErrorAction SilentlyContinue
 						Write-Host EnableLUA changed to 0 -ForegroundColor Cyan -ErrorAction SilentlyContinue
 							Start-Sleep -Seconds 2.5 -ErrorAction SilentlyContinue
 								Clear-Host -ErrorAction SilentlyContinue
-									Exit
+					
+Exit
