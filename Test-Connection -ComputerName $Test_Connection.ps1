@@ -1,5 +1,5 @@
 ﻿
-### Test-Connection -ComputerName $Test_Connection ###
+### Test-Connection -ComputerName $Test_Connection.ps1 ###
 
 while (1) { 
 
