@@ -1,33 +1,5 @@
-﻿
+
 ### Administrator mode DISABLE.ps1 ###
-
-param ([switch] $Elevated)
-
-Function Test-Admin {
-	
-  $Current_User = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
-
-  $Current_User.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
-
-}
-
-if ((Test-Admin) -eq $False) {
-    
-	if ($Elevated) 
-    
-	{
-		
-    } 
-    
-	else {
-		
-        Start-Process powershell.exe -Verb RunAs -ArgumentList ('-NoProfile -NoExit -File "{0}" -Elevated' -f ($MyInvocation.MyCommand.Definition))
-
-}
-
-Exit
-
-}
 
 Clear-Host -ErrorAction SilentlyContinue
 	$Registry_Path = 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
