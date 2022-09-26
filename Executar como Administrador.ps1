@@ -1,4 +1,3 @@
-
 param([switch]$Elevated)
 
 function Test-Admin {
