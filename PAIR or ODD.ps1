@@ -7,7 +7,7 @@ while (1) {
 
         Clear-Host -ErrorAction SilentlyContinue
         
-        $Type_the_number = Read-Host Type the number or e / E to exit
+        $Type_the_number = Read-Host Type the number or e/E to exit
         Start-Sleep -Seconds 1 -ErrorAction SilentlyContinue
         Clear-Host -ErrorAction SilentlyContinue
         
