@@ -1,4 +1,4 @@
-﻿
+
 ### Test-Connection -ComputerName $Test_Connection.ps1 ###
 
 while (1) { 
@@ -6,7 +6,7 @@ while (1) {
     while (2) {
 
         Clear-Host -ErrorAction SilentlyContinue
-        $Test_Connection = Read-Host Type IP or Host or e / E to exit
+        $Test_Connection = Read-Host Type IP or Host or e/E to exit
         Start-Sleep -Seconds 1 -ErrorAction SilentlyContinue
         Clear-Host -ErrorAction SilentlyContinue 
         if (($Test_Connection -eq 'e') -and ($Test_Connection -eq 'E')) {Exit}
