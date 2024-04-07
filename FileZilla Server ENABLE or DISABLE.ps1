@@ -11,4 +11,4 @@ if (
                     Start-Service -Name filezilla-server -Verbose -ErrorAction SilentlyContinue
                 }
 
-### ### -noprofile -executionpolicy bypass -file D:\FileZilla Server ENABLE or DISABLE.ps1 ###
+### -noprofile -executionpolicy bypass -file D:\FileZilla Server ENABLE or DISABLE.ps1 ###
