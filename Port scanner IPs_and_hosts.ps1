@@ -42,7 +42,7 @@ Clear-Host -ErrorAction SilentlyContinue
 Foreach ($IP_and_host in $IPs_and_hosts) {
 
     Start-Sleep -Seconds 2.5 -ErrorAction SilentlyContinue
-	Clear-Host -ErrorAction SilentlyContinue
+    Clear-Host -ErrorAction SilentlyContinue
 
 Foreach ($Communication_port in $Communication_ports) {
 
