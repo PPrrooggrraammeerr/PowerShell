@@ -1,14 +1,14 @@
 ﻿
-### ENABLE_or_DISABLE_Net_Adapter.ps1 ###
+### ENABLE_or_RESTART_Net_Adapter.ps1 ###
 
 Clear-Host -ErrorAction SilentlyContinue
-$enable_or_disable_net_adapter = Get-NetAdapter -Name Ethernet; 
+$enable_or_restart_net_adapter = Get-NetAdapter -Name Ethernet; 
 if (
-    $enable_or_disable_net_adapter.Status -eq 'Up') {
+    $enable_or_restart_net_adapter.Status -eq 'Up') {
         Restart-NetAdapter -Name Ethernet -Verbose -ErrorAction SilentlyContinue} 
             elseif (
-                $enable_or_disable_net_adapter.Status -eq 'Disabled') {
+                $enable_or_restart_net_adapter.Status -eq 'Disabled') {
                     Enable-NetAdapter -Name Ethernet -Verbose -ErrorAction SilentlyContinue
                 }
 
-### -noprofile -executionpolicy bypass -file D:\ENABLE_or_DISABLE_Net_Adapter.ps1 ###
+### -noprofile -executionpolicy bypass -file D:\ENABLE_or_RESTART_Net_Adapter.ps1 ###
