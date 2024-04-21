@@ -2,7 +2,7 @@
 ### OpenSSH_SSH_Server_START_or_RESTART.ps1 ###
 
 Clear-Host -ErrorAction SilentlyContinue
-$ssh_start_or_restart = Get-Service -Name sshd; 
+$ssh_start_or_restart = Get-Service -Name sshd
 if (
     $ssh_start_or_restart.Status -eq 'Running') {
         Restart-Service -Name sshd -Verbose -ErrorAction SilentlyContinue} 
