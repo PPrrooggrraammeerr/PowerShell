@@ -42,3 +42,5 @@ Clear-Host -ErrorAction SilentlyContinue
 Remove-Item -Path $create_users_file -Force -ErrorAction SilentlyContinue
 Start-Sleep -Seconds 1 -ErrorAction SilentlyContinue
 Clear-Host -ErrorAction SilentlyContinue
+
+Exit
