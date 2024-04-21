@@ -2,7 +2,7 @@
 ### FileZilla Server START or RESTART.ps1 ###
 
 Clear-Host -ErrorAction SilentlyContinue
-$ftp_start_or_restart = Get-Service -Name filezilla-server;
+$ftp_start_or_restart = Get-Service -Name filezilla-server
 if (
     $ftp_start_or_restart.Status -eq 'Running') {
         Restart-Service -Name filezilla-server -Verbose -ErrorAction SilentlyContinue} 
