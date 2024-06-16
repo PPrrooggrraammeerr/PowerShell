@@ -1,5 +1,5 @@
 ﻿
-### calculator_with_powershell.ps1 ###
+### Calculator_in_PowerShell.ps1 ###
 
 function addition {
     param (
