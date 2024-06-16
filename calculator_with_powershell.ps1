@@ -67,11 +67,11 @@ if ($type_the_operation -eq '+') {
 $result_the_operation = Write-Host -ForegroundColor Green "$result"
 Write-Output $result_the_operation
 Start-Sleep -Seconds 2.5 -ErrorAction SilentlyContinue
-Clear-Host Clear-Host -ErrorAction SilentlyContinue
+Clear-Host -ErrorAction SilentlyContinue
 
 } else {
 
-Clear-Host Clear-Host -ErrorAction SilentlyContinue
+Clear-Host -ErrorAction SilentlyContinue
 Write-Host -ForegroundColor Red 'Wrong operation'
 Start-Sleep -Seconds 2.5 -ErrorAction SilentlyContinue
 
