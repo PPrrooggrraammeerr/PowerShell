@@ -17,7 +17,7 @@ $IPv4 = Read-Host "IPv4"
 $Gateway = Read-Host "Gateway"
 $DNS = Read-Host "DNS"
 
-DNSArray = $DNS -split ','
+$DNSArray = $DNS -split ','
 
 New-NetIPAddress -IPAddress $IPv4 -InterfaceAlias "Wi-Fi" -DefaultGateway $Gateway -AddressFamily IPv4 -PrefixLength 24
 Set-DnsClientServerAddress -InterfaceAlias "Wi-Fi" -ServerAddresses $DNSArray
