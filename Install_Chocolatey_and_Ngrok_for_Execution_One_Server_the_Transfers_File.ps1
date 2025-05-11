@@ -13,14 +13,14 @@ Function Check-RunAsAdministrator () {
 		
     } else {
 		
-		$ElevatedProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell";
+	$ElevatedProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell";
 
-		$ElevatedProcess.Arguments = "& '" + $script:MyInvocation.MyCommand.Path + "'"
-		$ElevatedProcess.Verb = "RunAs"
-		
-		[System.Diagnostics.Process]::Start($ElevatedProcess)
-		
-		Exit
+	$ElevatedProcess.Arguments = "& '" + $script:MyInvocation.MyCommand.Path + "'"
+	$ElevatedProcess.Verb = "RunAs"
+	
+	[System.Diagnostics.Process]::Start($ElevatedProcess)
+	
+	Exit
 		
     }
 	
@@ -30,13 +30,13 @@ Check-RunAsAdministrator
 
 if (Test-Path -Path "C:\ProgramData\chocolatey") {
 
-	if (Test-Path -Path "C:\ProgramData\chocolatey\bin\choco.exe") {
+    if (Test-Path -Path "C:\ProgramData\chocolatey\bin\choco.exe") {
 		
-		Write-Host "Chocolatey is already installed!" -ForegroundColor Green
+	Write-Host "Chocolatey is already installed!" -ForegroundColor Green
         Start-Sleep -Seconds 2.5 -ErrorAction SilentlyContinue
         Clear-Host -ErrorAction SilentlyContinue
 		
-		choco.exe install ngrok --force;
+	choco.exe install ngrok --force;
 
         $Path_Server = "$env:USERPROFILE\Ngrok_Server_Transfers_File";
 
@@ -46,13 +46,13 @@ if (Test-Path -Path "C:\ProgramData\chocolatey") {
 
             ngrok config add-authtoken your_authtoken
             ngrok http file:///$Path_Server;
-			      Exit
+	    Exit
 
         }
 
         ngrok config add-authtoken your_authtoken
         ngrok http file:///$Path_Server;
-		    Exit
+	Exit
 
 	}
 
@@ -71,11 +71,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
     } else {
         ngrok config add-authtoken your_authtoken
         ngrok http file:///$Path_Server;
-		    Exit
+	Exit
     }
 
     ngrok config add-authtoken your_authtoken
     ngrok http file:///$Path_Server;
-	  Exit
+    Exit
 
 }
