@@ -79,3 +79,5 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
     Exit
 
 }
+
+### -noprofile -executionpolicy bypass -file D:\Install_Chocolatey_and_Ngrok_for_Execution_One_Server_the_Transfers_File.ps1 ###
